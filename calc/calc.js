@@ -7,8 +7,8 @@ var defaultCipherArraySaved = [] // copy of default ciphers
 var cCat = []; // list of all available cipher categories
 
 // Layout
-var cipherMenuColumns = 4 // number of columns for all available ciphers table
-var enabledCiphColumns = 4 // number of columns for enabled ciphers table (for phrase)
+var cipherMenuColumns = 2 // number of columns for all available ciphers table
+var enabledCiphColumns = 2 // number of columns for enabled ciphers table (for phrase)
 
 var colorControlsMenuOpened = false // color controls menu state
 var editCiphersMenuOpened = false // edit ciphers menu state
