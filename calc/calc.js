@@ -46,7 +46,7 @@ var alphaHlt = 0.15 // opacity for values that do not match - change value here 
 var optAllowPhraseComments = true // allow phrase comments, text inside [...] is not evaluated
 var liveDatabaseMode = true // live database mode
 
-var dbPageItems = 15 // number of phrases in one section
+var dbPageItems = 20 // number of phrases in one section
 var dbScrollItems = 1 // used for scrolling
 
 var optGradientCharts = true // gradient fill for breakdown/cipher charts
