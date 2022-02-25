@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+<title>GEMATRO - Gematria Calculator</title>
+<meta charset="utf-8">
+<link rel="shortcut icon" type="image/x-icon" href="res/favicon.ico">
+
+<!-- Android Web App - Add to Home Screen -->
+<link rel="manifest" href="manifest.json">
+
+<script src="lib/jquery.min.js"></script>
+<script src="lib/html2canvas.min.js"></script>
+<!-- html2canvas v1.0.0-alpha.12 -->
+
+<script src="calc/gematria.js"></script>
+<script src="calc/calc.js"></script>
+<script src="calc/ciphers.js"></script>
+<script src="calc/breakdown.js"></script>
+
+<script src="calc/highlighter.js"></script>
+<script src="calc/export.js"></script>
+<script src="calc/export-csv.js"></script>
+<script src="calc/num-prop.js"></script>
+<script src="calc/edit-ciphers.js"></script>
+<script src="calc/date-calc.js"></script>
+<script src="calc/database.js"></script>
+<script src="calc/quick-guide.js"></script>
+
+<link rel="stylesheet" type="text/css" href="calc/styles.css">
+
+<script>
+window.onpaint = function() {
+	updateInterfaceColor(true); // update interface color (first run)
+}
+$(window).load(function(){
+	$("#loader").delay(287).fadeOut("fast");
+});
+</script>
+</head>
+
+<body onload="initCalc(true)">
+
+<div id="loader"></div>
+<canvas id="canv"></canvas>
+
+<!-- preload font -->
+<span style="font-family: 'Roboto Mono';"></span>
+
+<div id="calcMain">
+	<center>
+
+		<div id="calcOptionsPanel"></div>
+
+		<div id="colorControlsMenuArea"></div>
+		<div id="editCiphersMenuArea"></div>
+		<div id="dateCalcMenuArea"></div>
+
+		<div id="inputArea">
+		  <input id="queryDBbtn" class="hideValue" type="button" onclick="queryDatabase()" value="Query">
+		  <input id="phraseBox" autofocus type="text" autocomplete="off" oninput="updateEnabledCipherTable(); updateWordBreakdown(breakCipher,false,false);" onkeydown="phraseBoxKeypress(event.keyCode)" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
+		  <input id="highlightBox" type="text" autocomplete="off"><span id="clearFilterButton"></span>
+		</div>
+
+		<div id="enabledCiphTable"></div>
+
+		<div id="BreakdownDetails">
+			<div id="BreakdownSpot"></div>
+			<div id="ChartSpot"></div>
+		</div>
+	</center>
+
+
+	<center>	
+		<div id="HistoryTableArea"></div>
+	</center>
+</div>
+
+</body>
+
+<script src="calc/coderain.js"></script>
+
+</html>
