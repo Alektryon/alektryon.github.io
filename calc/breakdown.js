@@ -29,7 +29,7 @@ $(document).ready(function(){
 function updateWordBreakdown(impName = breakCipher, impBool = false, chartUpd = true) { // false - preview temporary (hover), true - lock breakdown to a specific cipher
 	var x, curCipher, cSpot
 	var o, oo, acw, acl
-	var chLimit = 30 // character limit, used to switch to a long breakdown style
+	var chLimit = 40 // character limit, used to switch to a long breakdown style
 
 	updateEnabledCipherCount()
 	$("#BreakTableContainer").removeClass("hideValue") // unhide breakdown
