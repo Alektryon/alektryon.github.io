@@ -227,7 +227,7 @@ function createAboutMenu() { // create menu with all cipher catergories
 }
 
 function gotoGitHubRepo() {
-	window.open("https://github.com/gematro/gematro.github.io", "_blank")
+	window.open("https://github.com/Alektryon/alektryon.github.io", "_blank")
 }
 
 function gematroSvgLogo() {
