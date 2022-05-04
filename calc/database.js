@@ -68,7 +68,7 @@ $(document).ready(function(){
 
 function queryDatabase() {
 	var cVal
-	if(sVal() == "" || sVal() == 0) return // empty input
+	if(sVal() == "") return // empty input
 
 	if (liveDatabaseMode == true) calcLiveDatabase(userDBlive) // calculate gematria for live database for enabled ciphers
 
@@ -269,7 +269,7 @@ function updateDatabaseQueryTableScrollbar(stPos = 0, dItems) { // starting posi
 			} else {
 				gemVal = queryResult[x][valPos] // value only
 			}
-			if (gemVal == 0) gemVal = "-"
+		/*	if (gemVal == 0) gemVal = "-"	*/
 			valPos++ // increment value position
 
 			// mSame - same cipher match, mCross - cross cipher match
@@ -365,7 +365,7 @@ function updateDatabaseQueryTable(stPos = 0, dItems) { // starting position, tot
 			} else {
 				gemVal = queryResult[x][valPos] // value only
 			}
-			if (gemVal == 0) gemVal = "-"
+		/*	if (gemVal == 0) gemVal = "-"	*/
 			valPos++ // increment value position
 
 			// mSame - same cipher match, mCross - cross cipher match
