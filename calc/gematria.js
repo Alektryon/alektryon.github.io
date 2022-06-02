@@ -111,7 +111,7 @@ class cipher { // cipher constructor class
 			if (this.caseSensitive == false) nv = nv.toLowerCase()
 			nv = nv.charCodeAt(0)
 
-			if (n > 47 && n < 58) { // 0-9 digits
+			if (n > 47 && n < 58 && this.cArr.indexOf(49) == -1) { // 0-9 digits
 				if (optNumCalcMethod == 1) {
 					this.curNum = String(this.curNum) + String(n - 48) // append digits
 					if (lastSpace == false) {
