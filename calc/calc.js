@@ -217,6 +217,8 @@ function createAboutMenu() { // create menu with all cipher catergories
 	o += '<div style="margin: 0.5em;"></div>'
 	o += '<input class="intBtn" type="button" value="GitHub Repository" onclick="gotoGitHubRepo()">'
 	o += '<div style="margin: 0.5em;"></div>'
+	o += '<input class="intBtn" type="button" value="Gematria Research" onclick="gotoBlogger()">'
+	o += '<div style="margin: 0.5em;"></div>'
 	o += '<input class="intBtn" type="button" value="Quickstart Guide" onclick="displayQuickstartGuide()">'
 	o += '<div style="margin: 0.5em;"></div>'
 	o += '<input class="intBtn" type="button" value="Contacts" onclick="displayContactInfo()">'
@@ -228,6 +230,10 @@ function createAboutMenu() { // create menu with all cipher catergories
 
 function gotoGitHubRepo() {
 	window.open("https://github.com/Alektryon/alektryon.github.io", "_blank")
+}
+
+function gotoBlogger() {
+	window.open("https://gematriaresearch.blogspot.com/?m=0", "_blank")
 }
 
 function gematroSvgLogo() {
@@ -1224,7 +1230,7 @@ function phraseBoxKeypress(e) { // run on each keystroke inside text box - onkey
 
 function addPhraseToHistory(phr, upd) { // add new phrase to search history
 	var phrPos
-	if (phr !== "" && isNaN(phr)) { // if input is not empty and not a number
+	if (phr !== "") { // if input is not empty and not a number
 		phrPos = sHistory.indexOf(phr);
 		if (phrPos > -1) { // if phrase is in history
 			sHistory.splice(phrPos, 1) // first remove it from array
@@ -1270,7 +1276,7 @@ function updateHistoryTable(hltBoolArr) {
 	var tmpComment = ""; var commentMatch;
 	for (x = 0; x < sHistory.length; x++) {
 
-		if (x % 25 == 0) {
+		if (x % 36 == 0) {
 			ms += '<tr class="cH"><td class="mP"></td>'
 			for (z = 0; z < cipherList.length; z++) {
 				if (cipherList[z].enabled) {
