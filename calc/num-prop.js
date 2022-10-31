@@ -153,7 +153,8 @@ function listNumberPropertiesAlt(val) {
 	o += '<tr><td><span class="numPropBaseLabel">base8</span></td><td class="numPropBaseValue"><span class="numPropValPad">'+numBaseXtoY(val, 10, 8)+'</span></td></tr>'
 	o += '<tr><td><span class="numPropBaseLabel">base16</span></td><td class="numPropBaseValue"><span class="numPropValPad">'+numBaseXtoY(val, 10, 16)+'</span></td></tr>'
 	o += '<tr><td><span class="numPropBaseLabel">base36</span></td><td class="numPropBaseValue"><span class="numPropValPad">'+numBaseXtoY(val, 10, 36)+'</span></td></tr>'
-	o += '<tr><td><span class="numPropBaseLabel">base60</span></td><td class="numPropBaseValue"><span class="numPropValPad">'+numBaseXtoY(val, 10, 60, ":")+'</span></td></tr>'
+	o += '<tr><td><span class="numPropBaseLabel">base60</span></td><td class="numPropBaseValue"><span class="numPropValPad">'+fmtBaseY(numBaseXtoY(val, 10, 60, ":"), 60)+'</span></td></tr>'
+	o += '<tr><td><span class="numPropBaseLabel">base62</span></td><td class="numPropBaseValue"><span class="numPropValPad">'+numBaseXtoY(val, 10, 62)+'</span></td></tr>'
 	// o += '<tr><td><span class="numPropBaseLabel">base7 (+1)</span></td><td class="numPropBaseValue"><span class="numPropValPad">'+incEachDigit(numBaseXtoY(val, 10, 7), 1, "-")+'</span></td></tr>'
 
 	o += '<tr><td colspan=2><hr class="numPropSeparator"></td></tr>'
@@ -320,8 +321,7 @@ function numBaseXtoY (num, x, y, separator = "") { // convert number from one ba
 	if (num == 0) return num
 
 	var i
-	var baseDigits = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f',
-	'g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+	var baseDigits = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 	var newBase = [] // array for new base digits
 
 	if (x !== 10) { // convert to base10 if necessary
@@ -344,11 +344,11 @@ function numBaseXtoY (num, x, y, separator = "") { // convert number from one ba
 	}
 
 	var out = ""
-	if ( (y > 16 && y !== 36) && separator == "") separator = ":" // if no separator was specified for base16+, use colon
+	if ( (y > 16 && y !== 36 && y !== 62) && separator == "") separator = ":" // if no separator was specified for base16+, use colon
 
 	for (i = 0; i < newBase.length; i++) { // join digits (characters)
-		if (y <= 16 || y == 36) {
-			out += baseDigits[newBase[i]].toUpperCase() + separator
+		if (y <= 16 || y == 36 || y == 62) {
+			out += baseDigits[newBase[i]].split() + separator
 		} else if (y > 16 && y <= 99) {
 			out += ("00" + newBase[i]).slice(-2) + separator // leading zeroes
 		} else if (y > 100 && y <= 999) {
@@ -369,6 +369,13 @@ function incEachDigit(num, inc, separator = "") { // 314 + 1 -> 425
 	}
 	if (separator !== "") res = res.slice(0,-1) // remove last separator if present
 	return res
+}
+
+function fmtBaseY(num, base = 60) {
+	if (!isNaN(num) && Number(num) < base) {
+		if (Number(num) == 0) return '00:00'
+		else return '00:' + num
+	} else return num
 }
 
 function reduceNumber(num) { // digital root of a number
