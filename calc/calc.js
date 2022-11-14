@@ -235,7 +235,7 @@ function gotoGitHubRepo() {
 }
 
 function gotoGematro() {
-	window.open("https://gematro.com/", "_blank")
+	window.open("https://gematro.github.io/", "_blank")
 }
 
 function gotoBlogger() {
