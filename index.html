@@ -56,8 +56,8 @@ $(window).load(function(){
 
 		<div id="inputArea">
 		  <input id="queryDBbtn" class="hideValue" type="button" onclick="queryDatabase()" value="Query">
-		  <input id="phraseBox" autofocus type="text" autocomplete="off" oninput="updateEnabledCipherTable(); updateWordBreakdown(breakCipher,false,false);" onkeydown="phraseBoxKeypress(event.keyCode)" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
-		  <input id="highlightBox" type="text" autocomplete="off"><span id="clearFilterButton"></span>
+		  <input id="phraseBox" autofocus type="text" enterkeyhint="done" autocomplete="off" oninput="updateEnabledCipherTable(); updateWordBreakdown(breakCipher,false,false);" onkeydown="phraseBoxKeypress(event.keyCode)" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
+		  <input id="highlightBox" type="text" enterkeyhint="done" autocomplete="off"><span id="clearFilterButton"></span>
 		</div>
 
 		<div id="enabledCiphTable"></div>
