@@ -63,7 +63,7 @@ function displayQuickstartGuide() {
 	o += '<hr class="numPropSeparator">'
 	o += '<p><span class="qgBold2">Features</p>'
 
-	o += '<p class="qgMedium">Date Calculator</p>\n<ul><li>Calculate interval between two dates according to Gregorian calendar, supports <span class="qgBold">Add/Subtract</span> mode<br><span class="qgNote">Note: Make sure to consult timeanddate.com or other websites for precise calculations for old dates or other calendars (e.g. Julian)</span></li><li><span class="qgBold">Left Click</span> on <span class="qgBold">"From"</span> or <span class="qgBold">"to"</span> label to set a custom date description</li><li><span class="qgBold">Left Click</span> to highlight line with date durations</li><li><span class="qgBold">Right Click</span> to remove line with date durations</li><span class="qgNote">Note: Toggle "Include End Date" checkbox to bring the removed lines back</span></li><li>You can <span class="qgBold">import</span> a text file to calculate durations between multiple dates at once.<br>One date per line, <span class="qgBold">M/D/YYYY</span> format, comments are optional:<br><br>GEMATRO_DATES<br>1/28/2006 [comment]<br>11/7/1968 [comment]</li></ul>'
+	o += '<p class="qgMedium">Date Calculator</p>\n<ul><li>Calculate interval between two dates according to Gregorian calendar, supports <span class="qgBold">Add/Subtract</span> mode<br><span class="qgNote">Note: Make sure to consult timeanddate.com or other websites for precise calculations for old dates or other calendars (e.g. Julian)</span></li><li><span class="qgBold">Left Click</span> on <span class="qgBold">"From"</span> or <span class="qgBold">"to"</span> label to set a custom date description</li><li><span class="qgBold">Left Click</span> to highlight line with date durations</li><li><span class="qgBold">Right Click</span> to remove line with date durations</li><span class="qgNote">Note: Toggle "Include Both Dates" checkbox to bring the removed lines back</span></li><li>You can <span class="qgBold">import</span> a text file to calculate durations between multiple dates at once.<br>One date per line, <span class="qgBold">M/D/YYYY</span> format, comments are optional:<br><br>GEMATRO_DATES<br>1/28/2006 [comment]<br>11/7/1968 [comment]</li></ul>'
 
 	o += '<p class="qgMedium">Color Controls</p>\n<ul><li>Change cipher colors (<span class="qgBold">HSL</span> - Hue, Saturation, Lightness)</li><li>Make sure to <span class="qgBold">"Export Ciphers"</span> before you make any modifications inside <span class="qgBold">"Edit Ciphers"</span> menu</li></ul>'
 
@@ -133,11 +133,11 @@ function displayContactInfo() {
 
 	o += '<hr class="numPropSeparator">'
 	
-	o += '<div style="margin-top: 1em;margin-bottom: 1.25em;">This calculator that youʼre using was adapted by Luís Gonçalves, based on the original <a class="qgLink" href="https://gematro.github.io" target="_blank">GEMATRO</a> calculator by Saun Virroco.<br></span></div>'
+	o += '<div style="margin-top: 1em;margin-bottom: 1.25em;">This calculator that youʼre using was adapted by Luís Gonçalves, based on the <a class="qgLink" href="https://gematro.github.io" target="_blank">original GEMATRO</a> calculator by Saun Virroco.<br></span></div>'
 	
 	o += '<hr class="numPropSeparator">'
 	
-	o += '<div style="margin-top: 1em;margin-bottom: 1.25em;">Send your feedback to <a class="qgLink" href="mailto:mmiikhaa@gmail.com">mmiikhaa@gmail.com</a><br>(Original author of this software)<br><br>Send any suggestion to <a class="qgLink" href="mailto:qwirinus@proton.me">qwirinus@proton.me</a><br>(Creator of this version of Gematro)</div>'
+	o += '<div style="margin-top: 1em;margin-bottom: 1.25em;">Send your feedback to <a class="qgLink" href="mailto:mmiikhaa@gmail.com">mmiikh96@gmail.com</a><br>(Original author of this software)<br><br>Send any suggestion to <a class="qgLink" href="mailto:qwirinus@proton.me">qwirinus@proton.me</a><br>(Creator of this version of Gematro)</div>'
 	
 	o += '<hr class="numPropSeparator">'
 
