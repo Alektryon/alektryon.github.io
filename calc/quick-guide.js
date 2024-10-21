@@ -130,20 +130,20 @@ function displayContactInfo() {
 
 	var o = '<div class="contactInfo">'
 	o += '<p><span class="qgBold2">Contacts</p>'
-
-	o += '<hr class="numPropSeparator">'
-	
-	o += '<div style="margin-top: 1em;margin-bottom: 1.25em;">This calculator that youʼre using was adapted by Luís Gonçalves, based on the <a class="qgLink" href="https://gematro.github.io" target="_blank">original GEMATRO</a> calculator by Saun Virroco.<br></span></div>'
 	
 	o += '<hr class="numPropSeparator">'
 	
-	o += '<div style="margin-top: 1em;margin-bottom: 1.25em;">Send your feedback to <a class="qgLink" href="mailto:mmiikhaa@gmail.com">mmiikh96@gmail.com</a><br>(Original author of this software)<br><br>Send any suggestion to <a class="qgLink" href="mailto:qwirinus@proton.me">qwirinus@proton.me</a><br>(Creator of this version of Gematro)</div>'
+	o += '<div style="margin-top: 1em;margin-bottom: 1.25em;">This calculator that youʼre using is based entirely on the original <a class="qgLink" href="https://gematro.github.io" target="_blank">GEMATRO</a> calculator by <a class="qgLink" href="https://github.com/gematro" target="_blank">Mikhail</a>, with some changes, deletions and additions by Luís Gonçalves (<a class="qgLink" href="https://github.com/Alektryon" target="_blank">Alektryon</a>).<br></span></div>'
+	
+	o += '<hr class="numPropSeparator">'
+	
+	o += '<div style="margin-top: 1em;margin-bottom: 1.25em;">Send your feedback to <a class="qgLink" href="mailto:mmiikh96@gmail.com">mmiikh96@gmail.com</a><br>(Original author of this software)<br><br>Send any suggestion to <a class="qgLink" href="mailto:qwirinus@proton.me">qwirinus@proton.me</a><br>(Owner of this ʹforkʹ of Gematro)</div>'
 	
 	o += '<hr class="numPropSeparator">'
 
-	o += '<div style="margin-top: 1em;">If you enjoy this version of <span class="qgBold">Gematro</span> and want to show some support, please consider a donation:</div>'
+	o += '<div style="margin-top: 1em;">If you enjoy my blog <a class="qgLink" href="https://gematriaresearch.blogspot.com" target="_blank">Gematria Research</a>, and want to further support my work, I will greatly appreciate if you consider a donation. Thanks in advance! &#128522;</div>'
 
-	o += '<div class="qgBoldCoin">PayPal:</div>\n<span class="qgAddr"><a class="qgLink" href="https://paypal.me/alektryon">PayPal.me/Alektryon</a></span>'
+	o += '<br><span class="qgAddr"><a class="qgLink" href="https://paypal.me/alektryon">PayPal.me/Alektryon</a></span><br><br><br>'
 
 	o += '</div>'
 
